@@ -1,9 +1,9 @@
 package com.example.services;
+
 import java.util.List;
 import java.util.Optional;
 
 import com.example.entities.Course;
-
 
 public interface CourseService {
     Optional<Course> getCourseById(int courseId);

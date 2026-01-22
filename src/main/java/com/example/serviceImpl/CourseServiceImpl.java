@@ -10,7 +10,6 @@ import com.example.entities.Course;
 import com.example.repositories.CourseRepositories;
 import com.example.services.CourseService;
 
-
 @Service
 public class CourseServiceImpl implements CourseService {
 

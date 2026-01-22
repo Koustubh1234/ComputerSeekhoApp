@@ -1,5 +1,4 @@
 package com.example.serviceImpl;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -9,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.entities.ClosureReason;
 import com.example.repositories.ClosureReasonRepository;
 import com.example.services.ClosureReasonService;
+
 
 
 @Service
@@ -34,14 +34,19 @@ public class ColsureReasonServiceImpl implements ClosureReasonService{
 
     @Override
     public boolean updateClosureReason(ClosureReason closureReason) {
-        ClosureReason closureReason2 = closureReasonRepository.findById(closureReason.getClosureReasonId()).get();
-        if(closureReason2 != null) {
-            closureReason2.setClosureReasonDesc(closureReason.getClosureReasonDesc());
-            closureReasonRepository.save(closureReason2);
+        Optional<ClosureReason> optional =
+            closureReasonRepository.findById(closureReason.getClosureReasonId());
+
+        if (optional.isPresent()) {
+            ClosureReason existing = optional.get();
+            existing.setClosureReasonDesc(closureReason.getClosureReasonDesc());
+            existing.setEnquirerName(closureReason.getEnquirerName());
+            closureReasonRepository.save(existing);
             return true;
         }
         return false;
     }
+
 
     @Override
     public boolean deleteClosureReason(int id) {

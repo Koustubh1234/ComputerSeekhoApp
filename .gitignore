@@ -1,48 +1,56 @@
-# --- Java and Compiled Classes ---
-*.class
-*.log
-*.ctxt
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# --- Build Tool Directories ---
+# ========================
+# Compiled Java / binaries
+# ========================
 bin/
 target/
-out/
-.gradle/
-build/
+*.class
 
-# --- Maven Wrapper ---
+# ========================
+# Maven wrapper / build
+# ========================
 .mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+!/src/main//target/
+!/src/test//target/
 
-# --- IDE Specific Files (Eclipse, IntelliJ, VS Code) ---
-# Eclipse
-.settings/
+# ========================
+# Eclipse / STS
+# ========================
+.apt_generated
 .classpath
 .project
-.factorypath
+.settings/
+.springBeans
+.sts4-cache/
 
-# IntelliJ
-.idea/
+# ========================
+# IntelliJ IDEA
+# ========================
+.idea
+*.iws
 *.iml
 *.iws
 *.ipr
 out/
 
+# ========================
+# NetBeans
+# ========================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!/src/main//build/
+!/src/test//build/
+
+# ========================
 # VS Code
+# ========================
 .vscode/
 
-# --- OS Specific Files ---
+# ========================
+# OS-specific files
+# ========================
 .DS_Store
 Thumbs.db
-
-# --- Spring Boot specific ---
-*.rebel.xml
-.spring-beans
-.spring-beans.xml

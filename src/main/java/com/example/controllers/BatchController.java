@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.entities.Batch;
 import com.example.services.BatchService;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/batch")

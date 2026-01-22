@@ -10,7 +10,6 @@ import com.example.entities.Batch;
 import com.example.repositories.BatchRepository;
 import com.example.services.BatchService;
 
-
 @Service
 public class BatchServiceImpl implements BatchService{
 
