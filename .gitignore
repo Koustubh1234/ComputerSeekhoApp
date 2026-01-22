@@ -1,26 +1,20 @@
-##################################
-# Java / Compiled files
-##################################
+# ========================
+# Compiled Java / binaries
+# ========================
+bin/
+target/
 *.class
 
-##################################
-# Maven
-##################################
-target/
-!**/src/main/**/target/
-!**/src/test/**/target/
+# ========================
+# Maven wrapper / build
+# ========================
 .mvn/wrapper/maven-wrapper.jar
+!/src/main//target/
+!/src/test//target/
 
-##################################
-# Logs
-##################################
-*.log
-
-##################################
-# IDEs
-##################################
-
-# Spring Tool Suite (STS)
+# ========================
+# Eclipse / STS
+# ========================
 .apt_generated
 .classpath
 .factorypath
@@ -29,32 +23,33 @@ target/
 .springBeans
 .sts4-cache/
 
+# ========================
 # IntelliJ IDEA
-.idea/
+# ========================
+.idea
 *.iws
 *.iml
 *.ipr
 
-# VS Code
-.vscode/
-
+# ========================
 # NetBeans
+# ========================
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+!/src/main//build/
+!/src/test//build/
 
-##################################
-# OS files
-##################################
+# ========================
+# VS Code
+# ========================
+.vscode/
+
+# ========================
+# OS-specific files
+# ========================
 .DS_Store
 Thumbs.db
-
-##################################
-# Misc
-##################################
-HELP.md
